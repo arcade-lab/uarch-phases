@@ -1,0 +1,14 @@
+\section{Phase Characterization}
+
+Phases can be characterized in many ways (e.g. phase duration, performance, power utilization, etc). For the SFG phases that we are studying, we look at the phase length, phase transitions, and phase coverage. The phase length is an important characteristic to consider because it guides the client's decision to apply an optimization that makes sense given the amount of time the phase will last for. Ideally, the phase will last long enough to amortize the cost for applying the new configuration. The phase transitions is important to consider since it may factor into the explore time overhead, which is the period when the client recognizes a phase shift and explores different configurations. Consecutive phase transitions that result in the same configuration by the client wastes the time and resources in exploring. A lower number of phase transitions is ideal along with only phase transitions that are significant enough to require a new configuration. The phase coverage is the percentage of the application that has been classified as in-phase as opposed to in transition. The higher the phase coverage, the more impact an optimization applied by the client can have on the code as a whole. While there are several other phase characteristics, we select to study phase length, phase transition, and phase coverage since they are critical characteristics that commonly factor into a cost-benefit analysis made by the client.       
+
+\subsection{Phase Length}
+\input{phaselen}
+
+\subsection{Phase Transitions}
+\input{phasetrans}
+
+
+\subsection{Phase Coverage}
+\input{coverage}
+

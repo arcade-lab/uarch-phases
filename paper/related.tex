@@ -1,0 +1,17 @@
+\section{Related Work}
+
+\subsection{Conventional Phase Analysis Techniques}
+Program phase detection can be divided into techniques that define phases based on control flow, program counter, or performance characteristics. Each of these phase detection techniques define a model of program behavior over each interval based on some program characteristic.
+
+For program counter and performance characteristics based approaches, usually a fixed length interval is defined or the interval can vary in size. Working set signatures~\cite{Dhodapkar:2002:MMH} is an example of a program counter based approach. The premise behind working set signatures is that program phases are a function of the set of executing instructions. The working set signature is an encoding of the executed instructions over an interval.  For performance characteristics based approaches to phase classification, a common performance metric used is IPC; several other metrics have been used including cache miss rate, TLB miss rates, and even power consumption~\cite{Balasubramonian:2000:MHR}\cite{Isci:2006:PCP}. 
+
+Control flow based techniques characterize intervals based on the control-flow behavior of a program (e.g. functions, loops, and branches)~\cite{Huang:2003:PAP}\cite{Shen:2004:LPP}\cite{Zhang:2015:MPA}. Basic block vector (BBV)~\cite{Sherwood:2002:ACL} is an example of a control flow based approach. A basic block vector represents the set of basic blocks that execute over an interval. The idea behind basic block vectors is that program behavior can be modeled as a series of code blocks.
+
+\subsection{Hierarchical Phase Analysis}
+
+A phase hierarchy consists of longer duration phases composed of shorter running phases. Zhang et al~\cite{Zhang:2015:MPA} observed that coarse-grained intervals that belong to the same phase actually consists of stably distributed fine-grained phases. Phase hierarchies have been visualized using various techniques (e.g. multi-dimensional accumulated respresentation) to demonstrate their existence~\cite{Lau:2005:MVL}. Phase hierarchies imply that phases can form at different levels of granularity from very coarse to very fine-grained.
+
+Shen et al~\cite{Shen:2004:LPP} identifies locality phases, which characterizes program memory behavior based on data reuse distances. A combination of wavelet filtering and grammar compression is applied to identify locality phases. 
+
+Lau et al~\cite{Lau:2005:MVL} identify program phases using a performance metric (CPI) and k-means clustering to cluster together similar intervals at different levels of a variable length interval hierarchy. They use the Sequitur algorithm to determine the variable length intervals. They show in the paper that hierarchical phase behavior exists using visualization techniques known as 2D accumulated representation and 3D non-accumulated representation. In 3D non-accumulated representation, each point in the three dimensional space is a BBV (reduced down to three dimensions) and each edge is simply BBVs that are adjacent to each other in time. In 2D accumulated representation, the number of times each basic block is executed in an interval is also being encoded and the space is reduced down to two dimensions for visualization purposes. 
+
