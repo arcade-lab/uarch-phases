@@ -1,0 +1,5 @@
+tracing.vhd
+packer.vhd
+detect_mem_access.vhd
+syncram_dp_wrapper.vhd
+ahb_rate_trace.vhd
