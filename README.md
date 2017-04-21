@@ -9,11 +9,21 @@ A hardware design that supports the collection of processor signal profiles. The
 src/
  |_ lib/
     |_ tracing/
+ |_ soft/
+    |_ benchmarks/
+       |_ FFT/
+       |_ basicmath/
+       |_ bitcount/
+       |_ dijkstra/
+       |_ matmul
+       |_ qsort
+       |_ sha
+       |_ stringsearch
+ |_ scripts/
 doc/
  |_ images/
  |_ paper/
     |_ figs/
 
 ```
-
 
